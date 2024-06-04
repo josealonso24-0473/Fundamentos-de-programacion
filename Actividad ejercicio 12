@@ -1,0 +1,19 @@
+num1 = int(input("Ingrese el primer número: "))
+num2 = int(input("Ingrese el segundo número: "))
+
+diferencia = abs(num1 - num2)
+
+if diferencia % 2 == 0:
+    suma_digitos_num1 = sum(int(digito) for digito in str(num1))
+    suma_digitos_num2 = sum(int(digito) for digito in str(num2))
+    print(f"La suma de los dígitos de los números es: {suma_digitos_num1 + suma_digitos_num2}")
+
+if diferencia in {2, 3, 5, 7}:
+    producto = num1 * num2
+    print(f"El producto de los dos números es: {producto}")
+
+if str(diferencia).endswith('4'):
+    digitos_num1 = ' '.join(str(num1))
+    digitos_num2 = ' '.join(str(num2))
+    print(f"Los dígitos del primer número son: {digitos_num1}")
+    print(f"Los dígitos del segundo número son: {digitos_num2}")
